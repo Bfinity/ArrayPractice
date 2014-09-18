@@ -8,18 +8,29 @@ public class ArrayPractice {
 
     public static void main(String[] args) {
 
-       
+       System.out.println("It's been a really hot week.");
+        System.out.println("The week's daily temperature was ");
+        printOutDailyAverageTemps();
+        System.out.println("The week's average was " + calculateAverage());
 
     }
 
-    public static double printOutDailyAverageTemps()
+    public static void printOutDailyAverageTemps()
     {
-        double sum = 0;
-        int count = 0;
-        double weekAverage = 0;
         for(double temps: dailyAverageTemp)
         {
             System.out.println(temps);
+
+        }
+     }
+
+    public static double calculateAverage()
+    {
+        double sum = 0;
+        int count = 0;
+        double weekAverage;
+        for(double temps: dailyAverageTemp)
+        {
             sum = sum + temps;
             count++;
         }
